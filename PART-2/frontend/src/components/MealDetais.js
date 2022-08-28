@@ -1,10 +1,10 @@
-import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
+import { useMealsContext } from '../hooks/useMealsContext'
 
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const MealDetails = ({ meal }) => {
-  const { dispatch } = usemealsContext()
+  const { dispatch } = useMealsContext()
 
   const handleClick = async () => {
     const response = await fetch('/api/meals/' + meal._id, {
@@ -20,7 +20,7 @@ const MealDetails = ({ meal }) => {
   return (
     <div className="meal-details">
       <h4>{meal.food}</h4>
-      <p><strong>food description: </strong>{meal.description}</p>
+      <p><strong>Food description: </strong>{meal.description}</p>
       <p><strong>Price of food: </strong>{meal.price}</p>
       <p>{formatDistanceToNow(new Date(meal.createdAt), { addSuffix: true })}</p>
       <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
@@ -28,4 +28,4 @@ const MealDetails = ({ meal }) => {
   )
 }
 
-export default mealDetails
+export default MealDetails

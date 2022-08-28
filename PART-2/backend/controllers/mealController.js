@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 // get all Meals
 const getMeals = async (req, res) => {
-  const Meals = await Workout.find({}).sort({createdAt: -1})
+  const Meals = await Meal.find({}).sort({createdAt: -1})
 
   res.status(200).json(Meals)
 }
@@ -27,7 +27,7 @@ const getMeal = async (req, res) => {
 
 // create a new meal
 const createMeal = async (req, res) => {
-  const {title, load, reps} = req.body
+  const {food, description, price} = req.body
 
   let emptyFields = []
 
