@@ -3,8 +3,9 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
+  --primary: #e7195a;
   --error: #e7195a;
+  --background: #f10f0f;
 }
 body {
   background: #f1f1f1;
@@ -12,7 +13,7 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: #fff;
+  background: var(--background);
 }
 header .container {
   max-width: 1400px;
@@ -23,7 +24,7 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #333;
+  color: white;
   text-decoration: none;
 }
 .pages{
@@ -81,7 +82,7 @@ input {
   box-sizing: border-box;
 }
 form button {
-  background: var(--primary);
+  background: var(--background);
   border: 0;
   color: #fff;
   padding: 10px;

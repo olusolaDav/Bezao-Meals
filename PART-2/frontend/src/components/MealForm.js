@@ -53,7 +53,7 @@ const MealForm = () => {
 
       <label>Food description:</label>
       <input 
-        type="number" 
+        type="text" 
         onChange={(e) => setDescription(e.target.value)} 
         value={description}
         className={emptyFields.includes('description') ? 'error' : ''}
